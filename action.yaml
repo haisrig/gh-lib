@@ -26,7 +26,7 @@ runs:
           file_name: "${{inputs.file_name}}"
     - name: perform build
       if: steps.read_action.outputs.build_type == 'node'
-      uses: ./.github/actions/builds/node
+      uses: haisrig/node_build_action@main
       with:          
         build: ${{steps.read_action.outputs.build || 'false'}}
         unit_test: ${{steps.read_action.outputs.unit_test || 'false'}}
