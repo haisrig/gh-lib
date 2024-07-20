@@ -10,6 +10,12 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Print vars
+      run: |
+        pwd
+        ls
+        ls -la .github        
+      shell: bash
     - name: Read YAML File
       uses: ./.github/actions/read_yaml
       id: read_action
