@@ -19,7 +19,7 @@ runs:
         ls -la .github        
       shell: bash
     - name: Read YAML File
-      uses: ./actions/read_yaml
+      uses: haisrig/read_yaml@main
       id: read_action
       with:
           branch_name: "${GITHUB_REF_NAME}"
